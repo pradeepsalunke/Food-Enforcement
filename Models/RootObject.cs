@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Food.Models
 {
-    // Model for parks data. These classes can be obtained by either using 
-    // the Visual Studio editor (right-click -> Paste Special -> Paste Json as Classes)
-    // or sites such as JsonToCSHarp
 
+    public class MyContext : DbContext
+    {
+        internal static object Result;
+
+        public MyContext(DbContextOptions<MyContext> options)
+            : base(options)
+        { }
+
+    }
     public class Results
     {
         public int skip { get; set; }
@@ -17,9 +25,13 @@ namespace Food.Models
     public class Meta
     {
         public string disclaimer { get; set; }
+        [Column(TypeName = "nvarchar(200)")]
         public string terms { get; set; }
+        [Column(TypeName = "nvarchar(200)")]
         public string license { get; set; }
+        [Column(TypeName = "nvarchar(200)")]
         public string last_updated { get; set; }
+        [Column(TypeName = "nvarchar(200)")]
         public Results results { get; set; }
     }
 

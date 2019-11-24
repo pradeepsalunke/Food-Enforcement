@@ -49,7 +49,14 @@ namespace Food.APIHandlerManager
                 {
                     // JsonConvert is part of the NewtonSoft.Json Nuget package
                     rootObject = JsonConvert.DeserializeObject<RootObject>(parksData);
+                    foreach (Result result in rootObject)
+                    {
+                        dbcontext.
+                    }
                 }
+
+                
+
             }
             catch (Exception e)
             {
