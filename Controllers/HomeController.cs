@@ -14,17 +14,21 @@ namespace Food.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            APIHandlerChart webHandlers = new APIHandlerChart();
+            RootObject rootObject = webHandlers.GetRootObject();
+            return View(rootObject);
         }
 
         public IActionResult RootObject()
         {
             APIHandler webHandler = new APIHandler();
+
+
             RootObject rootObject = webHandler.GetRootObject();
 
             return View(rootObject);
         }
-
+        
         public IActionResult Privacy()
         {
             return View();

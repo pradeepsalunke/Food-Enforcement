@@ -12,6 +12,8 @@ namespace Food.Models
         public int skip { get; set; }
         public int limit { get; set; }
         public int total { get; set; }
+        public string term { get; set; }
+        public int count { get; set; }
     }
 
     public class Meta
@@ -54,6 +56,8 @@ namespace Food.Models
         public string postal_code { get; set; }
         public string voluntary_mandated { get; set; }
         public string status { get; set; }
+        public string term { get; set; }
+        public int count { get; set; }
     }
 
     public class RootObject
