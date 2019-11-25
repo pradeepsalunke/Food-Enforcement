@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Food.Models
 {
@@ -28,7 +30,7 @@ namespace Food.Models
     public class Openfda
     {
     }
-
+   
     public class Result
     {
         public string country { get; set; }
